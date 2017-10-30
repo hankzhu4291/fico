@@ -12,22 +12,22 @@ from sklearn import linear_model
 from sklearn.metrics import confusion_matrix, classification_report
 import xgboost as xgb
 
-import os
+import subprocess
 
 
 ## FICO score levels prediction workflow
 print 'Start FICO score levels prediction'
 print '################# DATA CLEANING #################'
-os.system('data_cleaning.py')
+import data_cleaning.py as data_cleaning
 
 print '################# DATA TRANSFORMATION #################'
-os.system('data_transformation.py')
+import data_transformation.py as data_transformation
 
 print '################# EDA & feature extraction #################'
-os.sytem('eda_feature_extraction.py')
+import eda_feature_extraction.py as eda_feature_extraction
 
 print '################# feature selection #################'
-os.system('feature_selection.py')
+import feature_selection.py as feature_selection
 
 print '################# prediction #################'
-os.system('prediction.py')
+import prediction.py as prediction
