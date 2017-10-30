@@ -8,10 +8,10 @@ These instructions will get you a copy of the project up and running the script 
 Language: Python 2.7
 
 ### Running the script
-'''
+```
 cd fico
-'''
+```
 
-'''
+```
 python run.py
-'''
+```
