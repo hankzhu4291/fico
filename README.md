@@ -12,6 +12,9 @@ Password: s:Ow{^{1
 ### transform zip code to latitude & longitude
 https://www.census.gov/geo/maps-data/data/gazetteer2016.html
 
+## Summary
+Given morgage information to predict the fico score level for the family using machine learning method 
+
 ## Prerequisites
 Language: Python 2.7
 
