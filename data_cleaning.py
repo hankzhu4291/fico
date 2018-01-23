@@ -53,4 +53,4 @@ na_removed_data = pd.merge(origin_2015.drop(na_col_origin, axis=1), perform_2015
 data_cleaned = na_removed_data.dropna()
 
 print 'export cleaned data'
-data_cleaned.to_csv('single_family_cleaned.csv', index=False)
+data_cleaned.to_csv('./data/single_family_cleaned.csv', index=False)

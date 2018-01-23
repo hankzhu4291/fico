@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from sklearn import tree
 
 
-data_credit = pd.read_csv('single_family_single_record.csv')
+data_credit = pd.read_csv('./data/single_family_single_record.csv')
 
 ## check distribution of fico scores
 plt.figure(figsize=(20,10))
@@ -50,4 +50,4 @@ print 'transform category variable into dummy variable'
 data_export_dummy = pd.get_dummies(columns=category_feature, data=data_credit)
 data_export_dummy.columns = [x.replace(',','_').replace(' ','_') for x in list(data_export_dummy.columns)]
 
-data_export_dummy.to_csv('data_extracted_feature.csv', index=False)
+data_export_dummy.to_csv('./data/data_extracted_feature.csv', index=False)

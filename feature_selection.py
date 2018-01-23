@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from sklearn import tree
 
 
-data_extracted = pd.read_csv('data_extracted_feature.csv')
+data_extracted = pd.read_csv('./data/data_extracted_feature.csv')
 
 X = data_extracted.drop('fico', axis=1)
 y = data_extracted['fico']
@@ -42,4 +42,4 @@ plt.show()
 selected_features = X.iloc[:, tr.feature_importances_>0.0001]
 fico = pd.DataFrame({'fico': y_credit_level})
 data_selected_feature = pd.concat([selected_features, fico], axis=1)
-data_selected_feature.to_csv('data_selected_feature_class.csv', index=False)
+data_selected_feature.to_csv('./data/data_selected_feature_class.csv', index=False)

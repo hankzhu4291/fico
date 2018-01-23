@@ -10,7 +10,7 @@ column_names = ['fico', 'frst_pay_dt', 'maturity_dt', 'msa_code', 'mi_pct', 'uni
                 'cltv', 'dti', 'orig_upb', 'ltv', 'interest_rate', 'channel', 'ppm_penalty', 'prod_type', 'state', 'property_type',
                'zipcode', 'id_loan', 'purpose', 'orgi_loan_term', 'num_borrowers', 'seller', 'servicer', 'month_report_period',
                'current_upb', 'delinquency_sts', 'loan_age', 'remain_months', 'current_interest_rate', 'non_interest_brng_upb']
-single_family = pd.read_csv('single_family_cleaned.csv')
+single_family = pd.read_csv('./data/single_family_cleaned.csv')
 single_family.columns = column_names
 
 # drop useless columns
@@ -63,4 +63,4 @@ data_la_lo = pd.merge(single_family_single_record, zip_la_lo_new, how='left', on
 
 data_export = data_la_lo.drop(['id_loan', 'zipcode'], axis=1)
 
-data_export.to_csv('single_family_single_record.csv', index=False)
+data_export.to_csv('./data/single_family_single_record.csv', index=False)

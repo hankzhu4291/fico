@@ -13,7 +13,7 @@ from sklearn.metrics import confusion_matrix, classification_report
 import xgboost as xgb
 
 
-data_selected_feature = pd.read_csv('data_selected_feature_class.csv')
+data_selected_feature = pd.read_csv('./data/data_selected_feature_class.csv')
 X = data_selected_feature.drop('fico', axis=1)
 y = data_selected_feature.fico
 
