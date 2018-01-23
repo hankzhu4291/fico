@@ -6,19 +6,19 @@ import pandas as pd
 column_names_origin = ['fico','dt_first_pi','flag_fthb','dt_matr','cd_msa',"mi_pct",'cnt_units','occpy_sts','cltv'
 ,'dti','orig_upb','ltv','int_rt','channel','ppmt_pnlty','prod_type','st', 'prop_type','zipcode','id_loan','loan_purpose',
 'orig_loan_term','cnt_borr','seller_name','servicer_name', 'flag_sc']
-origin_q1 = pd.read_table('historical_data1_Q12015.txt', names=column_names_origin, sep='|', na_values=['', ' ', '  ', '   '])
-origin_q2 = pd.read_table('historical_data1_Q22015.txt', names=column_names_origin, sep='|', na_values=['', ' ', '  ', '   '])
-origin_q3 = pd.read_table('historical_data1_Q32015.txt', names=column_names_origin, sep='|', na_values=['', ' ', '  ', '   '])
-origin_q4 = pd.read_table('historical_data1_Q42015.txt', names=column_names_origin, sep='|', na_values=['', ' ', '  ', '   '])
+origin_q1 = pd.read_table('./data/historical_data1_Q12015.txt', names=column_names_origin, sep='|', na_values=['', ' ', '  ', '   '])
+origin_q2 = pd.read_table('./data/historical_data1_Q22015.txt', names=column_names_origin, sep='|', na_values=['', ' ', '  ', '   '])
+origin_q3 = pd.read_table('./data/historical_data1_Q32015.txt', names=column_names_origin, sep='|', na_values=['', ' ', '  ', '   '])
+origin_q4 = pd.read_table('./data/historical_data1_Q42015.txt', names=column_names_origin, sep='|', na_values=['', ' ', '  ', '   '])
 
 column_names_perform = ['id_loan','svcg_cycle','current_upb','delq_sts','loan_age','mths_remng',
 'repch_flag','flag_mod', 'cd_zero_bal', 'dt_zero_bal','current_int_rt','non_int_brng_upb','dt_lst_pi','mi_recoveries',
 'net_sale_proceeds','non_mi_recoveries','expenses', 'legal_costs',
 'maint_pres_costs','taxes_ins_costs','misc_costs','actual_loss', 'modcost']
-perform_q1 = pd.read_table('historical_data1_time_Q12015.txt', names=column_names_perform, sep='|', na_values=['', ' ', '  ', '   '])
-perform_q2 = pd.read_table('historical_data1_time_Q22015.txt', names=column_names_perform, sep='|', na_values=['', ' ', '  ', '   '])
-perform_q3 = pd.read_table('historical_data1_time_Q32015.txt', names=column_names_perform, sep='|', na_values=['', ' ', '  ', '   '])
-perform_q4 = pd.read_table('historical_data1_time_Q42015.txt', names=column_names_perform, sep='|', na_values=['', ' ', '  ', '   '])
+perform_q1 = pd.read_table('./data/historical_data1_time_Q12015.txt', names=column_names_perform, sep='|', na_values=['', ' ', '  ', '   '])
+perform_q2 = pd.read_table('./data/historical_data1_time_Q22015.txt', names=column_names_perform, sep='|', na_values=['', ' ', '  ', '   '])
+perform_q3 = pd.read_table('./data/historical_data1_time_Q32015.txt', names=column_names_perform, sep='|', na_values=['', ' ', '  ', '   '])
+perform_q4 = pd.read_table('./data/historical_data1_time_Q42015.txt', names=column_names_perform, sep='|', na_values=['', ' ', '  ', '   '])
 
 origin_2015 = pd.concat([origin_q1, origin_q2, origin_q3, origin_q4], ignore_index=True)
 perform_2015 = pd.concat([perform_q1, perform_q2, perform_q3, perform_q4], ignore_index=True)

@@ -48,7 +48,7 @@ single_family_single_record = pd.merge(month_upb_transform.reset_index(), others
 single_family_single_record.delinquency_sts = single_family_single_record.delinquency_sts.apply(str)
 
 ## transform zip code into latitude and longitude
-zip_la_lo = pd.read_table('zip_la_lo.txt', usecols=[0, 5,6], names=['zipcode', 'latitude', 'longitude'])
+zip_la_lo = pd.read_table('./data/zip_la_lo.txt', usecols=[0, 5,6], names=['zipcode', 'latitude', 'longitude'])
 latitude = []
 longitude = []
 zip_la_lo.zipcode = zip_la_lo.zipcode//100*100
