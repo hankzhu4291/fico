@@ -12,8 +12,19 @@ Password: s:Ow{^{1
 ### transform zip code to latitude & longitude
 https://www.census.gov/geo/maps-data/data/gazetteer2016.html
 
+## Data Description
+two main data tables: Origination data file(origin) and Monthly performance data file(perform). The two sets of data are connected by 'id_loan'
+
 ## Summary
-Given morgage information to predict the fico score level for the family using machine learning method 
+### Data Cleaning process
+1. remove features with over 50% NaN values:
+  * origin: 'flag_fthb', 'flag_sc'
+  * perform:  'repch_flag', 'flag_mod', 'cd_zero_bal', 'dt_zero_bal', 'dt_lst_pi',
+         'mi_recoveries', 'net_sale_proceeds', 'non_mi_recoveries',
+         'expenses', 'legal_costs', 'maint_pres_costs', 'taxes_ins_costs',
+         'misc_costs', 'actual_loss', 'modcost'
+
+2. remove rows with NaN values
 
 ## Prerequisites
 Language: Python 2.7
